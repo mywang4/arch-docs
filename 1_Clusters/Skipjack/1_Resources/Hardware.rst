@@ -9,18 +9,20 @@ The Skipjack cluster is a high-performance computing (HPC) system operated by AR
 - **32 4-way nodes** with **NVIDIA H100** GPUs
 - **6 4-way nodes** with **NVIDIA H200** GPUs
 - **8 8-way nodes** with **NVIDIA L40** GPUs
+- **1 4-way node** with a **NVIDIA RTX PRO 6000** GPU
+- **2 8-way nodes** with **NVIDIA RTX PRO 6000** GPUs
 - **16 8-way nodes** with **NVIDIA B200** GPUs
-- **1 8-way nodes** with **NVIDIA B300** GPU
+- **1 8-way node** with a **NVIDIA B300** GPU
 
 .. - **5 PB of WEKA storage** (backed by a parallel file system)
 
-The following table summarizes the current node types available in the DSAI cluster:
+The following table summarizes the current node types available in the Skipjack cluster:
 
 .. list-table::
    :header-rows: 1
    :widths: 12 8 10 10 8 12 20
 
-   * - Partition
+   * - Node Type 
      - # Nodes
      - CPU Cores / Node
      - Memory Per Core (MB)
@@ -69,6 +71,20 @@ The following table summarizes the current node types available in the DSAI clus
      - 4
      - 72:00:00
      - Nvidia H200 150GB GPUs, AMD EPYC 9555 64 Core
+   * - h200
+     - 6
+     - 124
+     - 12,000
+     - 4
+     - 72:00:00
+     - Nvidia H200 150GB GPUs, AMD EPYC 9555 64 Core
+   * - rtx6000
+     - 3
+     - 124
+     - 8,000
+     - 8 for two nodes, 4 for one node
+     - 72:00:00
+     - Nvidia RTX PRO 6000 96GB GPUs, Intel(R) Xeon(R) 6767P
    * - b200
      - 16
      - 124
@@ -84,8 +100,8 @@ The following table summarizes the current node types available in the DSAI clus
      - 72:00:00
      - Nvidia B300 285GB GPUs, Intel(R) Xeon(R) 6767P
 
-Total system core count: **18,464 cores across 158 nodes**
-Total system GPU count: **64 L40S, 120 A100, 64 H100, 64 H100-NVL GPUs, 24 H200 GPUs, 128 B200 GPUs, 8 B300 GPUs**
+Total system core count: **18,836 cores across 161 nodes**
+Total system GPU count: **64 L40S, 120 A100, 64 H100, 64 H100-NVL GPUs, 24 H200 GPUs, 128 B200 GPUs, 8 B300 GPUs, 20 RTX PRO 6000 GPUs**
 
 .. note::
    Node specifications may change as new hardware is integrated into the cluster.

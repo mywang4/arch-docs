@@ -1,4 +1,4 @@
-Slurm on DSAI
+Slurm on Skipjack
 ==================
 
 .. toctree::
