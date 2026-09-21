@@ -29,56 +29,56 @@ The following table summarizes the current node types available in the DSAI clus
      - Features
    * - CPU
      - 80
-     - 112
+     - 108
      - 4,000
      - N/A
      - 72:00:00
      - Intel Xeon Platinum 8480+ 56 Core
    * - l40s
      - 8
-     - 128
+     - 124
      - 6,000
      - 8
      - 72:00:00
      - Nvidia L40S 48GB GPUs, AMD EPYC 9534 64 Core
    * - a100
      - 15
-     - 96
+     - 88
      - 10,000
      - 8
      - 72:00:00
      - Nvidia A100 80GB GPUs, AMD EPYC 7443 24 Core
    * - h100
      - 16
-     - 128
+     - 124
      - 12,000
      - 4
      - 72:00:00
      - Nvidia H100 85GB GPUs, AMD EPYC 9534 64 Core
    * - h100-NVL
      - 16
-     - 128
+     - 124
      - 12,000
      - 4
      - 72:00:00
      - Nvidia H100-NVL 100GB GPUs, AMD EPYC 9534 64 Core
    * - h200
      - 6
-     - 128
+     - 124
      - 12,000
      - 4
      - 72:00:00
      - Nvidia H200 150GB GPUs, AMD EPYC 9555 64 Core
    * - b200
      - 16
-     - 128
+     - 124
      - 16,000
      - 8
      - 72:00:00
      - Nvidia B200 190GB GPUs, INTEL(R) XEON(R) PLATINUM 8592+
    * - b300
      - 1
-     - 128
+     - 124
      - 24,000
      - 8
      - 72:00:00
