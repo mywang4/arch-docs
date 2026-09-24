@@ -15,7 +15,7 @@ Slurm divides resources into **partitions**, sometimes called **queues**. Each p
      - **Time limit (hh:mm:ss)**
      - **Key features**
    * - ``interactive_cpu``
-     - 5
+     - 3
      - 108
      - 4 000
      - (N/A)
@@ -28,6 +28,13 @@ Slurm divides resources into **partitions**, sometimes called **queues**. Each p
      - 8 × NVIDIA A100 80 GB 
      - 4:00:00
      - AMD EPYC 7443 (24-core) + A100 GPUs in 24 shard MIGs
+    * - ``agentic``
+     - 2
+     - 108
+     - 4 000
+     - (N/A)
+     - 4:00:00
+     - Intel Xeon Platinum 8480+ (56-core) dual-socket nodes
    * - ``med``
      - 80
      - 108
@@ -99,6 +106,11 @@ interactive_gpu
 ~~~~~~~~~~~~~~~
 
 * **8 × NVIDIA A100 80 GB** in 24 shard MIGs configuration - ideal for short term GPU jobs.
+
+agentic
+~~~~~~~
+
+* *No GPUs** – ideal for development while using agentic AI tools.
 
 l40s
 ~~~~
@@ -198,9 +210,18 @@ Helpful Tips
 
   .. code-block:: console
 
-    [root@dsailogin ~]$ sinfo -s
-    PARTITION AVAIL  TIMELIMIT   NODES(A/I/O/T) NODELIST
-
+    PARTITION       AVAIL  TIMELIMIT   NODES(A/I/O/T) NODELIST
+    interactive_cpu    up    4:00:00          1/2/0/3 csr[048-050]
+    interactive_gpu    up    4:00:00          1/1/0/2 ga[129-130]
+    agentic            up 7-00:00:00          1/2/0/3 csr[051-053]
+    med                up 3-00:00:00        68/0/6/74 csr[054-127]
+    a100               up 3-00:00:00        13/0/0/13 ga[131-143]
+    b200               up 3-00:00:00        12/4/0/16 gb[201-216]
+    b300               up 3-00:00:00        1/16/0/17 gb[301-317]
+    h100               up 3-00:00:00        31/1/0/32 gh[101-132]
+    h200               up 3-00:00:00          5/1/0/6 gh[201-206]
+    l40s               up 3-00:00:00          8/0/0/8 gl[105-112]
+    rtx6000            up 3-00:00:00          3/0/0/3 gr[101-103]
 
   This provides a summary view of each partition’s usage and availability.
 
